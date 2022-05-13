@@ -1,0 +1,75 @@
+/// Zengy Manga
+#pragma GCC optimize("O3")
+#pragma GCC optimize ("unroll-loops")
+#pragma GCC target("avx,avx2,fma")
+using namespace std;
+
+#include "bits/stdc++.h"
+#include <ext/pb_ds/tree_policy.hpp>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/rope>
+
+using namespace __gnu_pbds;
+using namespace __gnu_cxx;
+
+using ll = long long;
+using ii = pair<int, int>;
+
+template<typename T>
+using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+
+#define pb push_back
+#define F first
+#define S second
+#define f(i, a, b)  for(int i = a; i < b; i++)
+#define all(a)  a.begin(),a.end()
+#define rall(a) a.rbegin(),a.rend()
+#define sz(x) (int)(x).size()
+#define mp make_pair
+#define popCnt(x) (__builtin_popcountll(x))
+
+const int N = 5e5+5, LG = log2(N) + 1, MOD = 1e9 + 7;
+const double PI = acos(-1);
+void printCase() {
+    static int cs = 0;
+    cout << "Case #" << ++cs << ": ";
+}
+void doWork() {
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    set<char> st[2];
+    st[0].insert('F');
+    st[0].insert('X');
+    st[1].insert('F');
+    st[1].insert('O');
+    int ans[2] = {0,0};
+    int cur[2] = {0,1};
+
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < 2; j++) {
+            if(!st[cur[j]].count(s[i])) {
+                cur[j] ^= 1;
+                ans[j] += 1;
+            }
+        }
+    }
+    printCase();
+    cout << min(ans[0], ans[1]) << "\n";
+
+}
+int32_t main() {
+#ifdef ONLINE_JUDGE
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+#endif // ONLINE_JUDGE
+    freopen("weak_typing_chapter_1_input.txt", "r", stdin);
+    freopen("out.txt", "w", stdout);
+    int t = 1;
+    cin >> t;
+    while (t--) {
+        doWork();
+    }
+    return 0;
+}
