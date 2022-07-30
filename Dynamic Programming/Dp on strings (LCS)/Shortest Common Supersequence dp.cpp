@@ -44,7 +44,7 @@ public:
 				i--;
 			}
 			else {
-				ans, push_back(y[j - 1]);
+				ans. push_back(y[j - 1]);
 				j--;
 			}
 		}
