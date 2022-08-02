@@ -1,0 +1,2 @@
+1.In most of the greedy problems sorting is required.
+2.Members of a class are private by default and members of struct are public by default.

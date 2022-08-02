@@ -1,0 +1,5 @@
+//By default members in a class are private
+//You have to be very precise when dealing with linked list
+//access to NULL pointer is the 99% of the error
+//use delete very cautiously
+//Floyd Warshall 

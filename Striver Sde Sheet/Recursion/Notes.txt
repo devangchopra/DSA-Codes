@@ -1,0 +1,24 @@
+We assume that wehave the solution of the smaller problem.
+We solve the big problrm by breaking it into smaller problems.
+We keep breaking until we can reach a case where it can't break.
+All are waiting in the function call stack
+
+Tail Recursive is faster than other because in tail Recursive resursive call 
+is the last step...you dont have anything else after Recursive call
+therefore there is no need to save state.
+
+Compilers bascially eliminate the tail recursion and write "go to" label code
+Since Quick Sort in tail , that's why its faster than merge Sort
+
+
+Time Complexity Of Rsursion : Substitution Method / Equation Method
+T(N) : (n-k)....
+
+Recursion : Think Abstratctly : Dont go in much detail
+
+Recursion : 1) Base Case
+            2) Hypothesis
+            3) Induction
+
+Don't question Hypothesis
+When you write code , think Abstratctly , then dry run it
